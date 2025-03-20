@@ -50,7 +50,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * FROM orders_src WHERE insert_date > '@{pipeline().parameters.last_insert_date}'\n",
+							"value": "SELECT * FROM orders_src WHERE insert_date > @last_insert_date;\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
