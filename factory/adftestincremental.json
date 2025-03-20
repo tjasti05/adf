@@ -1,13 +1,5 @@
 {
 	"name": "adftestincremental",
-	"properties": {
-		"globalParameters": {
-			"last_insert_date": {
-				"type": "string",
-				"value": "@activity('LookupLastInsertDate').output.firstRow.lastInsertedDate"
-			}
-		}
-	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
