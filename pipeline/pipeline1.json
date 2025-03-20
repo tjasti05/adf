@@ -50,7 +50,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * FROM orders_src WHERE insert_date >@last_insert_date",
+							"value": "SELECT * FROM orders_src where insert_date>'@{activity('Lookup1').output.firstRow.lastInsertedDate}'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
