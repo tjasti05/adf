@@ -1,0 +1,45 @@
+{
+	"name": "trgttable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Order_Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Customer_Id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Total_Amount",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 6
+			},
+			{
+				"name": "order_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "insert_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "orders_trgt"
+		}
+	}
+}
